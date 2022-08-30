@@ -20,4 +20,4 @@ jobs:
 
       - name: Run test with pytest
         run: |
-          pytest
+          py.test

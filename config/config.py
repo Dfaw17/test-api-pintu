@@ -17,7 +17,7 @@ testRun = 61
 
 # SLACK
 slack_webhook = "https://hooks.slack.com/services/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"
-slack_webhook_daffa = "https://hooks.slack.com/services/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"
+slack_webhook_daffa = "https://hooks.slack.com/services/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"
 slack_title = "Slack Api Automation"
 
 
