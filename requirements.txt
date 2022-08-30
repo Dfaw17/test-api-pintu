@@ -1,0 +1,10 @@
+Pillow
+requests
+assertpy
+pytest
+pytest-email
+Faker
+pytest-testdox
+pytest_steps
+pytest-cases
+allure-pytest

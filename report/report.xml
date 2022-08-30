@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="3" time="8.287" timestamp="2022-08-30T18:05:47.814523" hostname="Pintus-MacBook-Pro-4.local"><testcase classname="automation.auth.test_login" name="test_login_normal" time="2.362" /><testcase classname="automation.auth.test_login" name="test_login_normal_2" time="2.624"><failure message="AssertionError: Expected &lt;200&gt; to be equal to &lt;201&gt;, but was not.">@pytest.mark.PintuTestRail(7551)
+    def test_login_normal_2():
+        param = {
+            "otp": data.otp,
+            "auth": {
+                "type": "email",
+                "email": data.email,
+                "password": data.pwd
+            }
+        }
+        req = requests.post(url.login, json=param, headers=pre.req_otp())
+&gt;       assert_that(req.status_code).is_equal_to(201)
+E       AssertionError: Expected &lt;200&gt; to be equal to &lt;201&gt;, but was not.
+
+automation/auth/test_login.py:35: AssertionError</failure></testcase><testcase classname="automation.auth.test_login" name="test_login_normal_3" time="3.228"><failure message="AssertionError: Expected &lt;200&gt; to be equal to &lt;201&gt;, but was not.">@pytest.mark.PintuTestRail(7551)
+    def test_login_normal_3():
+        param = {
+            "otp": data.otp,
+            "auth": {
+                "type": "email",
+                "email": data.email,
+                "password": data.pwd
+            }
+        }
+        req = requests.post(url.login, json=param, headers=pre.req_otp())
+&gt;       assert_that(req.status_code).is_equal_to(201)
+E       AssertionError: Expected &lt;200&gt; to be equal to &lt;201&gt;, but was not.
+
+automation/auth/test_login.py:49: AssertionError</failure></testcase></testsuite></testsuites>
