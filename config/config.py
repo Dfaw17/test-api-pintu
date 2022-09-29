@@ -100,7 +100,7 @@ def webhook_slack(color, success, failed, all, success_rate):
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": f'{url_artifact}|Check Detail Report>'
+                            "text": f'{url_artifact}|Check Detail Reports>'
                         }
                     }
                 ]
