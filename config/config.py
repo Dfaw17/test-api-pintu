@@ -12,12 +12,12 @@ use_env = stagging
 # TESTRAIL
 url = 'https://pintucrypto.testrail.io'
 username = 'daffa@pintu.co.id'
-password = '_Fawwaz170901_@@'
+password = 'Pintu789&*('
 testRun = 61
 
 # SLACK
-slack_webhook = "https://hooks.slack.com/services/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"
-slack_webhook_daffa = "https://hooks.slack.com/services/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"
+slack_webhook = "https://hooks.slack.com/services/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"
+slack_webhook_daffa = "https://hooks.slack.com/services/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"
 slack_title = "Slack Api Automation"
 
 
@@ -27,7 +27,7 @@ def testrail_success(tc):
     client.password = password
     client.send_post(
         f'add_result_for_case/{testRun}/{tc}',
-        {'status_id': 1, 'comment': 'Success, test by automation api'}
+        {'status_id': 1, 'comment': 'Success, test by test api'}
     )
 
 
@@ -37,13 +37,12 @@ def testrail_failed(tc):
     client.password = password
     client.send_post(
         f'add_result_for_case/{testRun}/{tc}',
-        {'status_id': 5, 'comment': 'Failed, test by automation api'}
+        {'status_id': 5, 'comment': 'Failed, test by test api'}
     )
 
 
 def webhook_slack(color, success, failed, all, success_rate):
     sr = round(success_rate, 2)
-    print(use_env)
     param = {
         "attachments": [
             {

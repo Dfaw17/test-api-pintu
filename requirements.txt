@@ -7,3 +7,4 @@ Faker
 pytest-testdox
 pytest_steps
 pytest-cases
+pytest-html

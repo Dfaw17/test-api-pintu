@@ -9,6 +9,7 @@ from config.testrail import *
 
 @pytest.mark.PintuTestRail(7551)
 def test_login_normal():
+    """Test Login Normal"""
     param = {
         "otp": data.otp,
         "auth": {
@@ -23,6 +24,7 @@ def test_login_normal():
 
 @pytest.mark.PintuTestRail(7551)
 def test_login_normal_2():
+    """Test Login Wrong"""
     param = {
         "otp": data.otp,
         "auth": {
@@ -32,11 +34,12 @@ def test_login_normal_2():
         }
     }
     req = requests.post(url.login, json=param, headers=pre.req_otp())
-    assert_that(req.status_code).is_equal_to(201)
+    assert_that(req.status_code).is_equal_to(200)
 
 
 @pytest.mark.PintuTestRail(7551)
 def test_login_normal_3():
+    """Test Login Failed"""
     param = {
         "otp": data.otp,
         "auth": {
@@ -46,4 +49,4 @@ def test_login_normal_3():
         }
     }
     req = requests.post(url.login, json=param, headers=pre.req_otp())
-    assert_that(req.status_code).is_equal_to(201)
+    assert_that(req.status_code).is_equal_to(200)

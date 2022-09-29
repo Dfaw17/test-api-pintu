@@ -1,7 +1,5 @@
 # IMPORT
-import config.config as config
 import config.data as data
-import config.endpoint as url
 import requests
 
 

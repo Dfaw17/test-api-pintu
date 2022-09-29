@@ -21,11 +21,3 @@ jobs:
       - name: Run test with pytest
         run: |
           pytest
-
-      - uses: dorny/test-reporter@v1
-        if: success() || failure()
-        with:
-          artifact: test-results
-          name: JEST Tests
-          path: '*.xml'
-          reporter: jest-junit
