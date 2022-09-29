@@ -27,12 +27,14 @@ jobs:
           TEST: ${{ github.event.pull_request.title }}
 
       - name: Upload Artifact
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: report
           path: report/
 
       - name: Download Artifact
+        if: always()
         uses: actions/download-artifact@v3
         with:
           name: report
