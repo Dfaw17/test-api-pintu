@@ -22,7 +22,7 @@ jobs:
 
       - name: Run test with pytest
         run: |
-          INPUT_STORE=${{ github.event.inputs.myInput }}
+          INPUT_STORE=${{ github.event.pull_request.title }}
           pytest 
 
       - name: Deploy report page to GitHub Page
