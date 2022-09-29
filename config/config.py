@@ -1,4 +1,6 @@
 # IMPORT
+import os
+
 import requests
 
 from config.testrail import APIClient
@@ -18,7 +20,7 @@ testRun = 61
 # SLACK
 slack_webhook = "https://hooks.slack.com/services/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"
 slack_webhook_daffa = "https://hooks.slack.com/services/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"
-slack_title = "Slack Api Automation"
+slack_title = os.environ['INPUT_STORE']
 
 
 def testrail_success(tc):
