@@ -21,6 +21,8 @@ jobs:
       - name: Run test with pytest
         run: |
           pytest
+        env:
+          TEST: Daffa
 
       - name: Deploy report page to GitHub Page
         uses: peaceiris/actions-gh-pages@v3
