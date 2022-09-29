@@ -20,7 +20,7 @@ testRun = 61
 # SLACK
 slack_webhook = "https://hooks.slack.com/services/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"
 slack_webhook_daffa = "https://hooks.slack.com/services/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"
-slack_title = os.environ['TEST']
+slack_title = str(os.environ['TEST'])
 
 
 def testrail_success(tc):
