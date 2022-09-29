@@ -27,7 +27,7 @@ def test_login_normal():
 
     # ASSERT
     assert_that(verify_email).is_equal_to(config.data.email)
-    assert_that(verify_status_code).is_equal_to(205)
+    assert_that(verify_status_code).is_equal_to(200)
 
 
 @pytest.mark.PintuTestRail(11396)
