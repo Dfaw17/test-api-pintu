@@ -1,8 +1,6 @@
 # IMPORT
 import os
-
 import requests
-
 from config.testrail import APIClient
 
 # ENVIRONMENT
