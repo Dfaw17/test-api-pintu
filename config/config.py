@@ -19,6 +19,7 @@ testRun = 61
 slack_webhook = "https://hooks.slack.com/services/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"
 slack_webhook_daffa = "https://hooks.slack.com/services/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"
 slack_title = os.environ.get('TEST')
+url_artifact = os.environ.get('RUNID')
 
 
 def testrail_success(tc):
@@ -99,7 +100,7 @@ def webhook_slack(color, success, failed, all, success_rate):
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": "<https://example.com|Check Detail Report>"
+                            "text": f'{url_artifact}|Check Detail Report>'
                         }
                     }
                 ]

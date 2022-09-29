@@ -25,6 +25,7 @@ jobs:
           pytest
         env:
           TEST: ${{ github.event.pull_request.title }}
+          RUNID: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
       - name: Upload Artifact
         if: always()
